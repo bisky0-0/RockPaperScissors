@@ -6,9 +6,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>odin project first game</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/292ed01dd7.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <header>
+        <div id="icon-container"><i class="fa-sharp fa-solid fa-circle-info" id="info-icon"></i></div>
+        rock <i class="fa-solid fa-hand-back-fist"></i> paper <i class="fa-solid fa-hand"></i> scissors <i
+            class="fa-solid fa-hand-scissors"></i> <span>game</span>
+    </header>
+    <div id="page-area">
+        <div id="info">
+            <i class="fa-sharp fa-solid fa-rectangle-xmark" id="close-icon"></i>
+            <h1 id="info-heading">game info</h1>
+            Rock paper scissors (also known by other orderings
+            of the three items, with "rock" sometimes being called "stone,"
+            or as Rochambeau, roshambo, or ro-sham-bo)is a hand
+            game originating from China, usually played between two people,
+            in which each player simultaneously forms one of three shapes with
+            an outstretched hand. These shapes are "rock" (a closed fist), "paper" (
+            a flat hand), and "scissors" (a fist with the index finger and middle
+            finger extended, forming a V). "Scissors" is identical to the two-fingered V sign
+            (also indicating "victory" or "peace") except that it is pointed horizontally
+            instead of being held upright in the air.
+            <p>for more info from wikipedia click<a href="https://en.wikipedia.org/wiki/Rock_paper_scissors"
+                    id="wiki-link" target="_blank"> here</a>
+            </p>
+        </div>
+        <div id="container">
+            <div id="user-container">
+                <h1>
+                    <i class="fa-solid fa-user"></i> your choice...
+                </h1>
+                <div id="user-choice" class="choice-container">
+                    <p id="u-choice">?</p>
+                    <div id="buttons-container">
+                        <button id="rock" value="rock"><i class="fa-solid fa-hand-back-fist"></i></button>
+                        <button id="paper" value="paper"><i class="fa-solid fa-hand"></i></button>
+                        <button id="scissors" value="scissors"><i class="fa-solid fa-hand-scissors"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div id="computer-container">
+                <h1>
+                    <i class="fa-solid fa-robot"></i>computer choice...
+                </h1>
+                <div id="computer-choice" class="choice-container">
+
+                    <div id="c-choice">
+                        <i class="fa-solid fa-robot" id="comp"></i>
+                    </div>
+                </div>
+            </div>
+            <div id="result-container">
+                <p id="result">who will be the winner ??</p>
+            </div>
+        </div>
+    </div>
     <script src="app.js"></script>
 </body>
 

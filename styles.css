@@ -1,0 +1,286 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body{
+    display: flex;
+    min-height: 100vh;
+    background-image: url("wp8121942-rock-paper-scissors-wallpapers.png");
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-size: 490px 490px;
+    position: relative;
+    text-transform: capitalize;
+}
+
+header{
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    font-size: 2em;
+    position: absolute;
+    top: 0;
+    background-color: #1d3557;
+    color: #fff;
+    padding-top: 15px;
+}
+
+#info-icon{
+    position: absolute;
+    left: 10px;
+    font-size: 3.5rem;
+    color: #fff;
+    top: 10px;
+    z-index: 1;
+    cursor: pointer;
+    transition: 1s;
+}
+
+#info-icon:hover{
+    color: #a8dadc;
+}
+
+
+header > i{
+    margin-right: 50px;
+}
+
+header > i:last-of-type{
+    margin-right: 10px;
+}
+
+#page-area{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+#info{
+    width: 0;
+    height: 91%;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    background-color: #1d3557;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 0;
+    padding-top: 0;
+    overflow: hidden;
+    margin-top: 4px;
+    text-align: justify;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    text-transform: lowercase;
+    transition: 1s;
+    content-visibility: hidden;
+    z-index: 3;
+}
+
+#info-heading{
+    color: #fff;
+    text-transform: capitalize;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+#info-heading::after{
+    content: "";
+    width: 50%;
+    height: 5px;
+    background-color: rgb(237, 236, 236);
+    position: absolute;
+    bottom: 5px;
+    left: 25%;
+}
+
+
+
+#info > p{
+    position: absolute;
+    bottom: 30px;
+    font-size: 1rem;
+    color: #a8dadc;
+    transition: 0;
+}
+
+#wiki-link{
+    color: inherit;
+}
+
+#close-icon{
+    color: #fff;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    font-size: 3rem;
+    z-index: 5;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+#close-icon:hover, #close-icon:focus{
+    color: #e63946;
+}
+
+
+#container{
+    width: 850px;
+    height: 790px;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3.5fr 1fr;
+    position: absolute;
+    bottom: 50px;
+}
+
+#user-container, #computer-container{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#user-container{
+    grid-area: 1 / 1 / span 1/ span 1;
+}
+
+h1{
+    font-size: 1.5em;
+    color:#fff ;
+    background-color:#1d3557;
+    height: 80px;
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+}
+
+#user-container > h1{
+    border-top-left-radius: 20px;
+}
+
+#computer-container > h1{
+    border-top-right-radius: 20px;
+}
+
+h1 > i{
+    margin-right: 10px;
+}
+
+.choice-container{
+    height: 90%;
+    width: 100%;
+    border: 2px solid #1d3557;
+    border-top: none;
+    background-color:#f1faee;
+}
+
+#user-choice{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    border-left: none;
+}
+
+#computer-choice{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: none;
+    background: #f1faee;
+}
+
+
+#user-choice > p{
+    color: #e63946;
+    font-size: 3rem;
+    animation: resize 0.6s ease infinite backwards;
+}
+
+@keyframes resize{
+    0%{
+        font-size: 3rem;
+    }
+
+    100%{
+        font-size: 7rem;
+    }
+}
+
+
+
+#buttons-container{
+    display: flex;
+    width: 100%;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 10px;
+}
+
+button{
+    width: 130px;
+    height: 60px;
+    font-size: 2em;
+    border-radius: 5px;
+    background-color: #a8dadc;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    box-shadow: 1px 1px 3px #1d3557
+}
+
+button:hover, button:focus{
+    background-color: #e63946;
+    color: #fff;
+}
+
+
+#result-container{
+    grid-area: 2 / 1 / span 1 / span 2;
+    width: 100%;
+    background-color: #1d3557;
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ 
+
+#result-container > p{
+    font-size: 1.5em;
+    color: #fff;
+}
+
+
+
+#comp{
+    font-size: 3rem;
+    color: #e63946;
+    animation: moving 2s linear infinite ;
+}
+
+@keyframes moving {
+
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
